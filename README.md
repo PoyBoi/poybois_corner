@@ -1,70 +1,67 @@
-# PoyBoi's Corner — Portfolio
+# POYBOI — Portfolio Website
 
-A modern, futuristic, slightly cyberpunk portfolio website for **Parv Sharma** (aka **PoyBoi**).
+A futuristic, cyberpunk-aesthetic portfolio for **Parv Sharma** (PoyBoi).
 
-Built with **Next.js 15 · Tailwind CSS v4 · Framer Motion · next-themes**.
+Built with **Next.js 14**, **TailwindCSS**, and **Framer Motion**.
 
-## Features
+## 🚀 Deploy on Vercel
 
-- 🌌 Cyberpunk aesthetic with grid background, glow effects, glassmorphism
-- 🌙 Dark / light mode toggle (defaults dark)
-- 🎠 Interactive project carousel with dot navigation
-- 📂 Animated skill category dropdowns
-- 📬 Contact section with social links
-- 📱 Fully responsive (mobile / tablet / desktop)
-- ♿ Accessibility-first (semantic HTML, ARIA labels, focus states)
-- ⚡ Vercel-ready, zero-config deploy
+The easiest way to deploy is via the [Vercel Platform](https://vercel.com):
 
-## Getting Started
+1. Push this repo to GitHub
+2. Import the repo on [vercel.com](https://vercel.com/new)
+3. Vercel auto-detects Next.js — just click **Deploy**
 
-### Prerequisites
-
-- Node.js ≥ 18
-- npm ≥ 9
-
-### Install & run locally
+## 🛠️ Local Development
 
 ```bash
+# Install dependencies
 npm install
+
+# Start dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-### Build
+## 🏗️ Build
 
 ```bash
 npm run build
-npm start
+npm run start
 ```
 
-### Lint
+## 📁 Structure
 
-```bash
-npm run lint
+```
+src/
+  app/
+    globals.css       # Cyberpunk styles, animations, neon effects
+    layout.tsx        # Root layout with fonts
+    page.tsx          # Main page — wires all sections together
+  components/
+    Navbar.tsx        # Sticky nav with dark/light toggle
+    Hero.tsx          # Glitch hero with typing animation & HUD
+    About.tsx         # About section with system terminal card
+    Projects.tsx      # Interactive project carousel (4 projects)
+    Skills.tsx        # Dropdown skill accordions with animated bars
+    Contact.tsx       # Contact section with social links
+    Footer.tsx        # Footer
 ```
 
-## Deploy to Vercel
+## ✨ Features
 
-1. Push this repo to GitHub (already done ✅).
-2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
-3. Leave all settings as default — Vercel auto-detects Next.js.
-4. Click **Deploy**.
+- 🌙 Dark / Light mode toggle (persisted in localStorage)
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🎯 Project carousel with swipe/drag support
+- ⚡ Skill dropdowns with animated progress bars
+- 🎨 Cyberpunk neon aesthetic with glitch effects
+- 🖥️ HUD-style terminal UI components
+- 🌐 SEO meta tags configured
+- 🚀 Vercel-ready deployment
 
-## Customisation
+## 🎨 Customization
 
-| File | What to change |
-|------|----------------|
-| `data/profile.ts` | Your name, bio, social links |
-| `data/projects.ts` | Featured projects (title, description, stack, links) |
-| `data/skills.ts` | Skill categories and individual skills |
-| `app/globals.css` | Design tokens, colours, spacing |
-
-## Tech Stack
-
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS v4
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Theme**: next-themes
-- **Deployment**: Vercel
+- Edit project data in `src/components/Projects.tsx`
+- Edit skill groups in `src/components/Skills.tsx`
+- Update colors in `tailwind.config.js` and `globals.css`
